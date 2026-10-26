@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+logs/
+models/*
+diag_v4/
+diagnostic_images/
+diagnostic_v2/
+backup_2026-10-25/
+*.log
+*.gif
+nohup.out
