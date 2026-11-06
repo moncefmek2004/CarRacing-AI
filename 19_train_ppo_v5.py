@@ -137,11 +137,6 @@ if __name__ == "__main__":
         CheckpointCallback(save_freq=max(1, 25_000 // N_ENVS),
                            save_path="./models/checkpoints/",
                            name_prefix="carracing_ppo_v5"),
-        EvalCallback(eval_env, best_model_save_path="models/v5_best",
-                     log_path="logs/v5_eval",
-                     eval_freq=max(1, 50_000 // N_ENVS),
-                     n_eval_episodes=len(EVAL_SEEDS),
-                     deterministic=True, verbose=1),
     ])
 
     print(f"PPO v5 : {TOTAL_STEPS} etapes | focus {FOCUS_SEEDS} | depart {START_MODEL}")
